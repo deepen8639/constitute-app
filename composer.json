@@ -1,1 +1,4 @@
-{}
+{
+    "name": "vagrant/constitue-app",
+    "require": {}
+}
