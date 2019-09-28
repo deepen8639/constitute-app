@@ -1,0 +1,140 @@
+body {
+  font-size: 16px;
+  font-family: monospace;
+  /* text-align: center; */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+
+.container{
+  /* cursor: pointer; */
+  text-align: left;
+  margin-left: 35%;
+  /* margin-right: 35%; */
+}
+
+.part0{
+  cursor: pointer;
+}
+label{
+  cursor: pointer;
+}
+
+.hide, .indivHide{
+  display: none;
+}
+
+#line1{
+  background-color: #4b0082;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#line1 > .title{
+
+  font-size: 25px;
+  color: #f5f5f5;
+
+}
+
+#line1 > .register{
+    cursor: pointer;
+    width: 75px;
+    color: #4b0082;
+    border-radius: 5px;
+    background: #f5f5f5;
+    /* box-shadow: 0 4px 0 ; */
+    font-size: 14px;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}
+
+#line1 > .login{
+  cursor: pointer;
+  width: 75px;
+  color: #4b0082;
+  border-radius: 5px;
+  background: #f5f5f5;
+  /* box-shadow: 0 4px 0 ; */
+  font-size: 14px;
+  position: absolute;
+  right: 100px;
+  top: 20%;
+}
+
+pre{
+  white-space: pre-wrap;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.disabled{
+  opacity: 0.5;
+}
+
+.customButton {
+  text-align: center;
+  margin-right: auto;
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 7%;
+}
+.customStartButton{
+  text-align: center;
+  margin-right: auto;
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.individual{
+  position: relative;
+  top: 30px;
+
+}
+.individualButton {
+  text-align: center;
+  /* margin-right: auto; */
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 7%;
+}
+.indivStartButton{
+  text-align: center;
+  /* margin-right: auto; */
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.selected{
+  opacity: 0.65;
+}

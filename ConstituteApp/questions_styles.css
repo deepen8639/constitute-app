@@ -1,0 +1,161 @@
+body{
+  font-size: 16px;
+  font-family: monospace;
+    /* text-align: center; */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+#line1{
+  background-color: #4b0082;
+  text-align: center;
+}
+
+#line1 > .title{
+  font-size: 25px;
+  /* text-align: center; */
+  color: #f5f5f5;
+
+}
+
+.confirm{
+    text-align: center;
+    font-size: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+.startbutton{
+    text-align: center;
+    float: right;
+    margin-right: 50px;
+    width: 100px;
+    padding: 7px;
+    color: #f5f5f5;
+    border-radius: 5px;
+    background: #4b0082;
+    /* box-shadow: 0 4px 0 #0088cc; */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* .caption{
+  margin-right: auto;
+  margin-left: 30%;
+} */
+pre{
+  white-space: pre-wrap;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.provision{
+  position: relative;
+}
+
+.answers{
+    text-align: left;
+    margin-left: 40%;
+}
+
+.answers .ans label{
+    cursor: pointer;
+    font-family: monospace;
+}
+
+li{
+  margin-bottom: 7px;
+}
+
+.selected{
+  color: blue;
+}
+
+#button{
+  text-align: center;
+  float: right;
+  margin-right: 50px;
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+}
+#random, .random{
+  position: relative;
+  top: 70px;
+  cursor: pointer;
+}
+.random{
+  margin-left: 10%;
+
+}
+.random{
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+
+}
+.backHome{
+  text-align: center;
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10%;
+}
+.disabled{
+  opacity: 0.65;
+}
+
+.dialog {
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  height: auto;
+  width: 300px;
+  display: none;
+  border:1px solid #aaa;
+  z-index:1000;
+}
+.dialog-header {
+  border: 1px solid #aaa;
+  background: #cccccc;
+  color: #222222;
+  font-weight: bold;
+  overflow: hidden;
+  padding:5px;
+}
+.dialog-title {
+  float: left;
+}
+.dialog-close {
+  float: right;
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6;
+  font-weight: normal;
+  color: #555555;
+  cursor: pointer;
+}
+.dialog-content {
+  position: relative;
+  border: 0;
+  padding: .5em 1em;
+  background: #fff;
+  overflow: auto;
+  width: auto;
+  height: auto;
+}
+
+.dialog-result{
+  color: #4b0082
+}

@@ -1,0 +1,54 @@
+body{
+  font-size: 16px;
+  font-family: Arial,sans-serif;
+  /* text-align: center; */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+#line1{
+  background-color: #4b0082;
+  text-align: center;
+}
+
+#line1 > .title{
+  font-family: 'MS Pゴシック';
+  font-size: 25px;
+  /* text-align: center; */
+  color: #f5f5f5;
+
+}
+.backHome{
+  text-align: center;
+  margin-right: auto;
+  width: 100px;
+  padding: 7px;
+  color: #f5f5f5;
+  border-radius: 5px;
+  background: #4b0082;
+  /* box-shadow: 0 4px 0 #0088cc; */
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 30px;
+}
+.hide{
+  display: none;
+}
+.wrong{
+  position: relative;
+  left: 5%;
+  margin-right: 10%;
+}
+.w-head{
+  /* font-weight: bold; */
+}
+
+.wrongProv{
+  cursor: pointer;
+}
+/* .provision::before{
+  content: "\A";
+  white-space: pre-line;
+  white-space: pre-wrap;
+
+} */
