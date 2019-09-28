@@ -1,4 +1,5 @@
 <?php
+//本番環境用のconfigファイル
 
 ini_set('display_errors', 1);
 $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
