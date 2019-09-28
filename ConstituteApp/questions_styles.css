@@ -159,3 +159,122 @@ li{
 .dialog-result{
   color: #4b0082
 }
+@media (min-width: 0px) and (max-width: 800px) {
+  body{
+    font-size: 20px;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+
+  }
+  #line1{
+    background-color: #4b0082;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  #line1 > .title{
+
+    font-size: 30px;
+    color: #f5f5f5;
+
+  }
+  .confirm{
+    text-align: center;
+    font-size: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+  }
+  .startbutton{
+      text-align: center;
+      float: right;
+      margin-right: 50px;
+      width: 100px;
+      padding: 7px;
+      color: #f5f5f5;
+      border-radius: 5px;
+      background: #4b0082;
+      /* box-shadow: 0 4px 0 #0088cc; */
+      cursor: pointer;
+      font-size: 18px;
+      position: relative;
+      top: 23px;
+  }
+  .backHome{
+    text-align: center;
+    width: 125px;
+    padding: 7px;
+    color: #f5f5f5;
+    border-radius: 5px;
+    background: #4b0082;
+    /* box-shadow: 0 4px 0 #0088cc; */
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10%;
+  }
+  #random, .random{
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+  }
+
+  .answers{
+      text-align: left;
+      margin-left: 30%;
+  }
+
+  .answers .ans label{
+      cursor: pointer;
+      font-family: monospace;
+  }
+  #button{
+    text-align: center;
+    float: right;
+    margin-right: 50px;
+    width: 100px;
+    padding: 7px;
+    color: #f5f5f5;
+    border-radius: 5px;
+    background: #4b0082;
+    /* box-shadow: 0 4px 0 #0088cc; */
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .dialog-header {
+    border: 1px solid #aaa;
+    background: #cccccc;
+    color: #222222;
+    font-weight: bold;
+    overflow: hidden;
+    padding:5px;
+  }
+  .dialog-title {
+    float: left;
+  }
+  .dialog-close {
+    float: right;
+    border: 1px solid #d3d3d3;
+    background: #e6e6e6;
+    font-weight: normal;
+    color: #555555;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: #fff;
+    overflow: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .dialog-result{
+    color: #4b0082
+  }
+
+}
