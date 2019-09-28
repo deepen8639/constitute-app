@@ -1,11 +1,15 @@
 <?php
 
 ini_set('display_errors', 1);
-
+$db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
+$db['dbname'] = ltrim($db['path'], '/');
+$dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+$user = $db['user'];
+$password = $db['pass'];
 define('DB_DATABASE','heroku_7ed077737e560cd');
-define('DB_USERNAME','b0fc4d494cb47b');
-define('DB_PASSWORD','3fe785f3');
-define('PDO_DSN',' mysql://b0fc4d494cb47b:3fe785f3@us-cdbr-iron-east-02.cleardb.net/' . DB_DATABASE);
+define('DB_USERNAME',$user);
+define('DB_PASSWORD',$password);
+define('PDO_DSN',$dsn);
 
 session_start();
 
