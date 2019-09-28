@@ -40,8 +40,8 @@ if($_SESSION['current_num'] >= 0){
     <div id="line1"><span class="title">条文練習</span></div>
 
     <?php if($_SESSION['current_num'] < 0): ?>
-    <?php echo '<div class="confirm">' . h($confirmText) . '</div>'; ?>
-    <?php echo '<div class="startbutton">' . h('はい') . '</div>'; ?>
+    <?php echo '<span class="confirm">' . h($confirmText) . '</span>'; ?>
+    <?php echo '<span class="startbutton">' . h('はい') . '</span>'; ?>
     <?php echo '<label for="random" class="random">ランダム</label><input type="checkbox" name="random" value="random" id="random">' ; ?>
     <?php else: ?>
       <div class="caption">
