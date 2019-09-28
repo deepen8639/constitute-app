@@ -1,6 +1,5 @@
 {
     "name": "vagrant/constitue-app",
     "require": {
-      "php": "5.6.40"
     }
 }
