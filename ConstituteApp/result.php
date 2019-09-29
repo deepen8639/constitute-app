@@ -16,6 +16,8 @@ $wrongQues = $Prov->getWrongQues();
  <html lang="ja" dir="ltr">
    <head>
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
      <title>結果</title>
      <link rel="stylesheet" href="result_styles.css">
    </head>
