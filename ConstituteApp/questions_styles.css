@@ -214,11 +214,18 @@ li{
     font-size: 18px;
     margin-left: 10%;
   }
+
   #random, .random{
     position: relative;
     top: 100px;
     cursor: pointer;
   }
+  pre{
+    white-space: pre-wrap;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
 
   .answers{
       text-align: left;
