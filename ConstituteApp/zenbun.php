@@ -13,8 +13,10 @@ $title = $_SESSION['currentProvSet'][0]['title'];
  <html lang="ja" dir="ltr">
    <head>
      <meta charset="utf-8">
+
      <title>憲法学習教室</title>
      <link rel="stylesheet" href="zenbun_styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
      <div id='line1'>
