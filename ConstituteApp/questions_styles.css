@@ -183,14 +183,14 @@ li{
   .confirm{
     text-align: center;
     font-size: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 10%;
+    margin-left: 10%;
 
   }
   .startbutton{
       text-align: center;
       float: right;
-      margin-right: 50px;
+      margin-right: 10%;
       width: 100px;
       padding: 7px;
       color: #f5f5f5;
