@@ -75,5 +75,11 @@ pre{
     font-size: 18px;
     margin-left: 10%;
   }
+  pre{
+    white-space: pre-wrap;
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+
 
 }
