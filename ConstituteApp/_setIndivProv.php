@@ -13,5 +13,6 @@ if($_POST['selected_id']==='none'){
 header("Content-Type: application/json; charset=utf-8");
 echo json_encode([
   'res' => $res]);
+exit();
 
  ?>
