@@ -13,8 +13,12 @@ $(function(){
   });
 
   $('#button').on('click', function(){
-    if(!$(this).hasClass('disabled')){
+    // 回答が選択されていない状態と、既に回答がクリックされている状態を振り分ける
+    // （ダイアログが表示されている時は、回答ボタンを押した際のPOSTを無効化する）
+    if(!$(this).hasClass('disabled') && !$(this).hasClass('clicked')){
       var answer = $('.selected').text();
+      //回答がクリックされたことをclassに"clicked"を加えることで示す
+      $(this).addClass('clicked');
       $.post('/_answer.php',{
         answer: answer
       }).done(function(res){

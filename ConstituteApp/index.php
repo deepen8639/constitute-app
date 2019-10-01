@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/functions.php');
@@ -18,6 +17,16 @@ $CandT = $_SESSION['CapAndTitle'];
  <!DOCTYPE html>
  <html lang="ja" dir="ltr">
    <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149161268-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149161268-1');
+</script>
+
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>憲法学習教室</title>
