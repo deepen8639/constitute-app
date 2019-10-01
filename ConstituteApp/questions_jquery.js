@@ -25,18 +25,28 @@ $(function(){
         if(res['result'] === 'collect'){
           //CSSを変更
           $("#dialog_id").css({"left": leftPosition + "px"});
+          $("#dialog_id").css({"top": 300 + "px"});
           $('.dialog-content').text('正解です');
           //ダイアログを表示する
           $("#dialog_id").show();
         }else{
           //CSSを変更
           $("#dialog_id").css({"left": leftPosition + "px"});
+          $("#dialog_id").css({"top": 300 + "px"});
           $('.dialog-content').html('不正解です<br>正解は「'
           + '<span class="dialog-result" >' + res['result'] + '</span>」です');
           //ダイアログを表示する
           $("#dialog_id").show();
         }
       });
+      // スクロールの速度
+      var speed = 400; // ミリ秒で記述
+      var target = $("#line1");
+      var position = target.offset().top;
+      // position -= 650;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      // alert(position);
+      return false;
     }
   });
 
