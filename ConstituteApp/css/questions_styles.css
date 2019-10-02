@@ -91,9 +91,6 @@ li{
 }
 .random{
   margin-left: 10%;
-
-}
-.random{
   width: 100px;
   padding: 7px;
   color: #f5f5f5;
@@ -159,6 +156,7 @@ li{
 .dialog-result{
   color: #4b0082
 }
+
 @media (min-width: 0px) and (max-width: 400px) {
   body{
     font-size: 20px;
@@ -189,7 +187,6 @@ li{
   }
   .startbutton{
       text-align: center;
-      float: right;
       margin-right: 10%;
       width: 100px;
       padding: 7px;
@@ -200,7 +197,7 @@ li{
       cursor: pointer;
       font-size: 18px;
       position: relative;
-      top: 28px;
+      top: 24.5px;
   }
   .backHome{
     text-align: center;
@@ -248,6 +245,10 @@ li{
     /* box-shadow: 0 4px 0 #0088cc; */
     cursor: pointer;
     font-size: 18px;
+  }
+
+  #dialog_id{
+    top: 300px;
   }
 
   .dialog-header {

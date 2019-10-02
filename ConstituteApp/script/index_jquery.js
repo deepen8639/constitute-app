@@ -7,12 +7,12 @@ $(function(){
     var selected_id = $(this).attr('id');
     var currentPart = $(this).text();
     // alert($(this).attr('id'));
-    $.post('_setProv.php', {
+    $.post('../Ajax/_setProv.php', {
       selected_id: selected_id,
       currentPart: currentPart
     }).done(function(res){
       // alert(res['result']);
-      window.location.href = '/zenbun.php';
+      window.location.href = '../main/zenbun.php';
     });
   });
 
@@ -43,13 +43,13 @@ $(function(){
       // var latter_id = $(this).next('div').attr('id');
       var currentPart = $(this).text();
       // alert($(this).attr('id'));
-      $.post('_setProv.php', {
+      $.post('../Ajax/_setProv.php', {
         selected_id: selected_id,
         // latter_id: latter_id,
         currentPart: currentPart
       }).done(function(res){
         // alert(res['result']);
-        window.location.href = '/questions.php';
+        window.location.href = '../main/questions.php';
       });
     }
 
@@ -85,14 +85,14 @@ $(function(){
     if($.isEmptyObject(selected_id)){
       selected_id = 'none';
     }
-    $.post('_setCustomProv.php', {
+    $.post('../Ajax/_setCustomProv.php', {
       selected_id: selected_id,
       selected_parts: selected_parts
     }).done(function(res){
       if(res['res']=='not selected'){
         alert('条文を選択してください');
       }else{
-        window.location.href = '/customQues.php';
+        window.location.href = '../main/customQues.php';
         // alert(selected_id,selected_parts);
       }
     });
@@ -134,7 +134,7 @@ $(function(){
     if($.isEmptyObject(selected_id)){
       selected_id = 'none';
     }
-    $.post('_setIndivProv.php',{
+    $.post('../Ajax/_setIndivProv.php',{
       selected_id: selected_id,
       // selected_caption: selected_caption
     }).done(function(res){
@@ -143,13 +143,11 @@ $(function(){
       if(res['res']==='not selected'){
         alert('条文を選択してください');
       }else{
-        window.location.href = '/indivQues.php';
+        window.location.href = '../main/indivQues.php';
       }
 
     });
   });
 
-  $('.backHome-button').on('click', function(){
-    window.location.href = '/index.php';
-  });
+
 });

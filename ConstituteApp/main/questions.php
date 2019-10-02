@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/functions.php');
-require_once(__DIR__ . '/Provision.php');
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../functions/functions.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 
 
 $Prov = new LawApp\Provision();
@@ -46,14 +46,16 @@ if($_SESSION['current_num'] >= 0){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title></title>
-    <link rel="stylesheet" href="questions_styles.css">
+    <link rel="stylesheet" href="../css/questions_styles.css">
   </head>
   <body>
     <div id="line1"><span class="title">条文練習</span></div>
 
+
+
     <?php if($_SESSION['current_num'] < 0): ?>
     <?php echo '<div class="confirm">' . h($confirmText) . '</div>'; ?>
-    <?php echo '<div class="startbutton">' . h('はい') . '</div>'; ?>
+    <?php echo '<div class="startbutton line">' . h('はい') . '</div>'; ?>
     <?php echo '<label for="random" class="random">ランダム</label><input type="checkbox" name="random" value="random" id="random">' ; ?>
     <?php else: ?>
       <div class="caption">
@@ -68,7 +70,7 @@ if($_SESSION['current_num'] >= 0){
        value="">' . h($choices[$i]) . '</label></li>'; ?>
     <?php endfor; ?>
   </ol>
-  <?php echo '<div id="button" class="disabled">' . h('回答') . '</div>'; ?>
+  <?php echo '<div id="button" class="disabled line">' . h('回答') . '</div>'; ?>
     <?php endif; ?>
 
     <div class="dialog" id="dialog_id">
@@ -85,10 +87,10 @@ if($_SESSION['current_num'] >= 0){
    <div class="dialog-content">正解OR不正解</div>
      </div>
 
-    <div class="backHome">ホームに戻る</div>
+    <div class="backHome line">ホームに戻る</div>
     <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="questions_jquery.js">
+    <script src="../script/questions_jquery.js">
 
     </script>
   </body>

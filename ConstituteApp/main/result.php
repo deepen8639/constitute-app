@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/functions.php');
-require_once(__DIR__ . '/Provision.php');
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../functions/functions.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 
 $Prov = new LawApp\Provision();
 $result = $Prov->getScore();
@@ -29,7 +29,7 @@ $wrongQues = $Prov->getWrongQues();
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <title>結果</title>
-     <link rel="stylesheet" href="result_styles.css">
+     <link rel="stylesheet" href="../css/result_styles.css">
    </head>
    <body>
      <div id="line1"><span class="title">条文練習</span></div>
@@ -58,7 +58,7 @@ $wrongQues = $Prov->getWrongQues();
    </div>
    <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   <script src="result_jquery.js">
+   <script src="../script/result_jquery.js">
    </script>
 
    </body>

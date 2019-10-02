@@ -2,7 +2,7 @@
 
 namespace LawApp;
 
-require_once(__DIR__ . '/config.php');
+require_once(__DIR__ . '/../config/config.php');
 
 class Provision {
   private $_db;

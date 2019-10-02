@@ -19,20 +19,18 @@ $(function(){
       var answer = $('.selected').text();
       //回答がクリックされたことをclassに"clicked"を加えることで示す
       $(this).addClass('clicked');
-      $.post('/_answer.php',{
+      $.post('../Ajax/_answer.php',{
         answer: answer
       }).done(function(res){
         if(res['result'] === 'collect'){
           //CSSを変更
           $("#dialog_id").css({"left": leftPosition + "px"});
-          $("#dialog_id").css({"top": 300 + "px"});
           $('.dialog-content').text('正解です');
           //ダイアログを表示する
           $("#dialog_id").show();
         }else{
           //CSSを変更
           $("#dialog_id").css({"left": leftPosition + "px"});
-          $("#dialog_id").css({"top": 300 + "px"});
           $('.dialog-content').html('不正解です<br>正解は「'
           + '<span class="dialog-result" >' + res['result'] + '</span>」です');
           //ダイアログを表示する
@@ -53,9 +51,9 @@ $(function(){
   $(".dialog-close").on("click", function(){
     $(this).parents(".dialog").hide();
     if($(this).val() === 'result'){
-      window.location.href = '/result.php';
+      window.location.href = './result.php';
     }else if($(this).val() === 'close'){
-    $.post('/_pageReload.php',{
+    $.post('../Ajax/_pageReload.php',{
 
     }).done(function(){
       $('input[name="choices"]:checked').prop('checked', false);
@@ -71,7 +69,7 @@ $(function(){
     }else{
       random = 0;
     }
-    $.post('/_pageStart.php',{
+    $.post('../Ajax/_pageStart.php',{
       random: random
     }).done(function(){
       // alert(random);
@@ -81,7 +79,7 @@ $(function(){
   });
 
   $('.backHome').on('click', function(){
-    window.location.href = '/index.php';
+    window.location.href = './index.php';
   });
 
 });

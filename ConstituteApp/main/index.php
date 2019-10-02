@@ -1,12 +1,15 @@
 <?php
 
-require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/functions.php');
-require_once(__DIR__ . '/Provision.php');
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../functions/functions.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 
 $Prov = new LawApp\Provision();
+//セッションをリセット
 $Prov->resetSession();
+//キャプションとOO条（タイトル）を取得、セッションに格納
 $Prov->setParts();
+//格納したキャプションとタイトルを$CandTにセット
 $CandT = $_SESSION['CapAndTitle'];
 
 // var_dump($CandT);
@@ -30,12 +33,13 @@ $CandT = $_SESSION['CapAndTitle'];
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>憲法学習教室</title>
-     <link rel="stylesheet" href="index_styles.css">
+     <link rel="stylesheet" href='../css/index_styles.css' type="text/css">
    </head>
   <body>
     <div id='line1'>
       <span class="title">条文練習</span>
     </div>
+
 
     <div class="container">
 
@@ -143,7 +147,7 @@ $CandT = $_SESSION['CapAndTitle'];
     </div>
     <div class="custom">
       <span class="customButton">
-        複数選択する
+        章で選択する
       </span>
       <span class="customStartButton hide">
         開始
@@ -163,7 +167,7 @@ $CandT = $_SESSION['CapAndTitle'];
 
   <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="index_jquery.js">
+  <script src="../script/index_jquery.js">
 
   </script>
 

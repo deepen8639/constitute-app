@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '/Provision.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 $Prov = new LawApp\Provision();
 
 $Prov->pageReload();

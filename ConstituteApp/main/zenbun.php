@@ -1,7 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/functions.php');
-require_once(__DIR__ . '/config.php');
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../functions/functions.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 
 $zenbun = $_SESSION['currentProvSet'][0]['provision'];
 $title = $_SESSION['currentProvSet'][0]['title'];
@@ -15,7 +16,7 @@ $title = $_SESSION['currentProvSet'][0]['title'];
      <meta charset="utf-8">
 
      <title>憲法学習教室</title>
-     <link rel="stylesheet" href="zenbun_styles.css">
+     <link rel="stylesheet" href="../css/zenbun_styles.css">
      <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
@@ -34,7 +35,7 @@ $title = $_SESSION['currentProvSet'][0]['title'];
    </div>
    <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   <script src="index_jquery.js">
+   <script src="../script/zenbun_jquery.js">
 
    </script>
    </body>

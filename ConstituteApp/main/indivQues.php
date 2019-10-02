@@ -1,11 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/functions.php');
-require_once(__DIR__ . '/Provision.php');
-
-// var_dump($_SESSION['currentProvSet']);
-// var_dump($_SESSION['currentPart']);
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../functions/functions.php');
+require_once(__DIR__ . '/../Class/Provision.php');
 
 $Prov = new LawApp\Provision();
 if($_SESSION['current_num'] >= 0){
@@ -21,12 +18,12 @@ if($_SESSION['current_num'] >= 0){
   $provision = str_replace($blank, '(   )', $provision);
 
 }else{
-  $confirmText = $Prov->getCustomConfText();
+  $confirmText = $Prov->getIndivConfText();
 }
 
+// var_dump($_SESSION['currentProvSet']);
+
  ?>
-
-
  <!DOCTYPE html>
  <html lang="ja" dir="ltr">
    <head>
@@ -44,13 +41,15 @@ if($_SESSION['current_num'] >= 0){
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <title></title>
-     <link rel="stylesheet" href="questions_styles.css">
+     <link rel="stylesheet" href="../css/questions_styles.css">
    </head>
    <body>
      <div id="line1"><span class="title">条文練習</span></div>
 
      <?php if($_SESSION['current_num'] < 0): ?>
-     <?php echo '<div class="confirm">' . $confirmText . '</div>'; ?>
+       <?php foreach ($confirmText as $key => $value): ?>
+     <?php echo '<div class="confirm">' . h($value) . '</div>'; ?>
+   <?php endforeach; ?>
      <?php echo '<div class="startbutton">' . h('はい') . '</div>'; ?>
      <?php echo '<label for="random" class="random">ランダム</label><input type="checkbox" name="random" value="random" id="random">' ; ?>
      <?php else: ?>
@@ -62,8 +61,9 @@ if($_SESSION['current_num'] >= 0){
      </div>
      <ol class="answers">
      <?php for($i=0; $i<3; $i++) : ?>
-       <?php echo '<li class="ans"><label><input type="radio" name="choices"
-        value="">' . h($choices[$i]) . '</label></li>'; ?>
+
+     <?php echo '<li class="ans"><label><input type="radio" name="choices"
+      value="">' . h($choices[$i]) . '</label></li>'; ?>
      <?php endfor; ?>
    </ol>
    <?php echo '<div id="button" class="disabled">' . h('回答') . '</div>'; ?>
@@ -86,7 +86,7 @@ if($_SESSION['current_num'] >= 0){
      <div class="backHome">ホームに戻る</div>
      <script
      src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-     <script src="questions_jquery.js">
+     <script src="../script/questions_jquery.js">
 
      </script>
    </body>
