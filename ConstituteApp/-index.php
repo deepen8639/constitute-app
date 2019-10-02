@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/../config/config.php');
-require_once(__DIR__ . '/../functions/functions.php');
-require_once(__DIR__ . '/../Class/Provision.php');
+require_once(__DIR__ . '/config/config.php');
+require_once(__DIR__ . '/functions/functions.php');
+require_once(__DIR__ . '/Class/Provision.php');
 
 $Prov = new LawApp\Provision();
 //セッションをリセット
@@ -33,7 +33,7 @@ $CandT = $_SESSION['CapAndTitle'];
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>憲法学習教室</title>
-     <link rel="stylesheet" href='../css/index_styles.css' type="text/css">
+     <link rel="stylesheet" href='css/index_styles.css' type="text/css">
    </head>
   <body>
     <div id='line1'>
@@ -167,7 +167,7 @@ $CandT = $_SESSION['CapAndTitle'];
 
   <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="../script/index_jquery.js">
+  <script src="script/index_jquery.js">
 
   </script>
 

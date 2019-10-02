@@ -19,7 +19,7 @@ $(function(){
       var answer = $('.selected').text();
       //回答がクリックされたことをclassに"clicked"を加えることで示す
       $(this).addClass('clicked');
-      $.post('../Ajax/_answer.php',{
+      $.post('./Ajax/_answer.php',{
         answer: answer
       }).done(function(res){
         if(res['result'] === 'collect'){
@@ -51,9 +51,9 @@ $(function(){
   $(".dialog-close").on("click", function(){
     $(this).parents(".dialog").hide();
     if($(this).val() === 'result'){
-      window.location.href = './result.php';
+      window.location.href = './-result.php';
     }else if($(this).val() === 'close'){
-    $.post('../Ajax/_pageReload.php',{
+    $.post('./Ajax/_pageReload.php',{
 
     }).done(function(){
       $('input[name="choices"]:checked').prop('checked', false);
@@ -69,7 +69,7 @@ $(function(){
     }else{
       random = 0;
     }
-    $.post('../Ajax/_pageStart.php',{
+    $.post('./Ajax/_pageStart.php',{
       random: random
     }).done(function(){
       // alert(random);

@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/../config/config.php');
-require_once(__DIR__ . '/../functions/functions.php');
-require_once(__DIR__ . '/../Class/Provision.php');
+require_once(__DIR__ . '/config/config.php');
+require_once(__DIR__ . '/functions/functions.php');
+require_once(__DIR__ . '/Class/Provision.php');
 
 $zenbun = $_SESSION['currentProvSet'][0]['provision'];
 $title = $_SESSION['currentProvSet'][0]['title'];

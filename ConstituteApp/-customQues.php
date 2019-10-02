@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/../config/config.php');
-require_once(__DIR__ . '/../functions/functions.php');
-require_once(__DIR__ . '/../Class/Provision.php');
+require_once(__DIR__ . '/config/config.php');
+require_once(__DIR__ . '/functions/functions.php');
+require_once(__DIR__ . '/Class/Provision.php');
 
 // var_dump($_SESSION['currentProvSet']);
 // var_dump($_SESSION['currentPart']);
@@ -44,7 +44,7 @@ if($_SESSION['current_num'] >= 0){
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <title></title>
-     <link rel="stylesheet" href="../css/questions_styles.css">
+     <link rel="stylesheet" href="css/questions_styles.css">
    </head>
    <body>
      <div id="line1"><span class="title">条文練習</span></div>
@@ -86,7 +86,7 @@ if($_SESSION['current_num'] >= 0){
      <div class="backHome">ホームに戻る</div>
      <script
      src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-     <script src="../script/questions_jquery.js">
+     <script src="script/questions_jquery.js">
 
      </script>
    </body>
