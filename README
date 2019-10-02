@@ -1,5 +1,2 @@
 ConstituteApp
 WebApp Practice
-[vagrant@localhost ConstitueApp]$ git remote -v
-heroku  https://git.heroku.com/tranquil-scrubland-04053.git (fetch)
-heroku  https://git.heroku.com/tranquil-scrubland-04053.git (push)
