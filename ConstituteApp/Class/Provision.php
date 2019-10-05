@@ -163,6 +163,7 @@ class Provision {
    $_SESSION['currentPart'] = '';
    $_SESSION['wrong_ques'] = [];
    $_SESSION['random'] = false;
+   $_SESSION['finish'] = false;
    // $this->_initSession();
  }
 
@@ -194,12 +195,12 @@ class Provision {
 
 
  public function getScore(){
-   return [
-     'percentage' => round($_SESSION['correct_count']
-     / count($_SESSION['currentProvSet']) * 100),
-     'score' => $_SESSION['correct_count'],
-     'amount' => count($_SESSION['currentProvSet']),
-     ];
+
+         return ['percentage' => round($_SESSION['correct_count']
+       / count($_SESSION['currentProvSet']) * 100),
+       'score' => $_SESSION['correct_count'],
+       'amount' => count($_SESSION['currentProvSet'])];
+
  }
 
  public function getWrongQues(){

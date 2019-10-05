@@ -4,16 +4,17 @@ $(function(){
 
 
   $('.part0').on('click', function(){
-    var selected_id = $(this).attr('id');
-    var currentPart = $(this).text();
-    // alert($(this).attr('id'));
-    $.post('./Ajax/_setProv.php', {
-      selected_id: selected_id,
-      currentPart: currentPart
-    }).done(function(res){
-      // alert(res['result']);
+    //変更した部分(Ajax処理)を残しておく
+    // var selected_id = $(this).attr('id');
+    // var currentPart = $(this).text();
+    // $.post('./Ajax/_setProv.php', {
+    //   selected_id: selected_id,
+    //   currentPart: currentPart
+    // }).done(function(res){
+    //前文はviewでセットするようにしたので、
+    //ここはただリダイレクトするだけ
       window.location.href = './-zenbun.php';
-    });
+    // });
   });
 
 

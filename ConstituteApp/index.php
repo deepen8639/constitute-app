@@ -1,6 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/config/config.php');
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
 
@@ -12,7 +11,7 @@ $Prov->setParts();
 //格納したキャプションとタイトルを$CandTにセット
 $CandT = $_SESSION['CapAndTitle'];
 
-// var_dump($CandT);
+// var_dump(SITE_URL);
 
  ?>
 

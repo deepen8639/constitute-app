@@ -1,13 +1,20 @@
 <?php
 
-require_once(__DIR__ . '/config/config.php');
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
 
+//ホームから戻ってきた場合、
+//ホームに戻る
+if($_SESSION['current_num'] === -1){
+  header('Location: ' . SITE_URL);
+  exit;
+}
+$_SESSION['finish'] = true;
 $Prov = new LawApp\Provision();
 $result = $Prov->getScore();
 $wrongQues = $Prov->getWrongQues();
-// var_dump($wrongQues);
+
+
 
  ?>
 

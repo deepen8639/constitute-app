@@ -12,6 +12,14 @@ define('DB_DATABASE','Constitute');
 define('DB_USERNAME','User');
 define('DB_PASSWORD','Massan24H');
 define('PDO_DSN','mysql:dbname=Constitute;host=localhost;charset=utf8mb4');
+//urlの設定
+if (empty($_SERVER["HTTPS"])) {
+  $url =  "http://";
+} else {
+  $url =  "https://";
+}
+
+define('SITE_URL', $url . $_SERVER['HTTP_HOST']);
 
 
  ?>

@@ -1,16 +1,26 @@
 <?php
 
-require_once(__DIR__ . '/config/config.php');
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
 
-// var_dump($_SESSION['currentProvSet']);
-// var_dump($_SESSION['currentPart']);
+//reault画面から戻ってきた場合、
+//ホームに戻る
+if($_SESSION['finish']){
+  header('Location: ' . SITE_URL);
+  exit;
+}
+//もしも条文がSESSIONに入っていなければ、
+//最初のページに戻る
+if(empty($_SESSION['currentProvSet'])){
+  header('Location: ' . SITE_URL);
+  exit;
+}
 
 $Prov = new LawApp\Provision();
 if($_SESSION['current_num'] >= 0){
-
+  //SESSIONに格納されている条文のうち、current_num番目のものを持ってくる
   $questions = $Prov->getQuestion();
+  //使いやすいように変数に格納
   $provision = $questions['provision'];
   $caption =  $questions['caption'];
   $title = $questions['title'];
@@ -21,8 +31,12 @@ if($_SESSION['current_num'] >= 0){
   $provision = str_replace($blank, '(   )', $provision);
 
 }else{
+  //最初は「OOを練習しますか？」と表示する
+  //ので、その文章を取得する
   $confirmText = $Prov->getCustomConfText();
 }
+
+
 
  ?>
 

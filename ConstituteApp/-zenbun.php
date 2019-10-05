@@ -1,8 +1,13 @@
 <?php
 
-require_once(__DIR__ . '/config/config.php');
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
+
+
+$Prov = new LawApp\Provision();
+//前文はここでセットする
+//後々変える
+$Prov->setProv('part0_1');
 
 $zenbun = $_SESSION['currentProvSet'][0]['provision'];
 $title = $_SESSION['currentProvSet'][0]['title'];
