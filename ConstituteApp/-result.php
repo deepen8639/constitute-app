@@ -2,6 +2,7 @@
 
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
+require_once(__DIR__ . '/Class/User.php');
 
 //ホームから戻ってきた場合、
 //ホームに戻る
@@ -15,7 +16,21 @@ $result = $Prov->getScore();
 $wrongQues = $Prov->getWrongQues();
 
 
+$User = new LawApp\User();
+if(isset($_SESSION['login'])){
+  if($_SESSION['login'] === true){
+    if(!$_SESSION['resultUpdated']){
+      //ページ更新でデータベースの更新が重複するのを防ぐ
+      //もしもログインされていたら正誤情報をUsersデータベースに格納
+      $res = $User->updateUserInfo($_SESSION['wrong_ques_id'],
+      $_SESSION['collect_ques_id'], $_SESSION['user']->id,
+      $_SESSION['user']);
+      $_SESSION['resultUpdated'] = true;
+    }
+  }
+}
 
+// var_dump($_SESSION['wrong_ques_id'], $_SESSION['collect_ques_id']);
  ?>
 
 

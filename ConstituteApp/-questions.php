@@ -1,6 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/config/config.php');
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/Class/Provision.php');
 
@@ -42,7 +41,7 @@ if($_SESSION['current_num'] >= 0){
 }
 
 
-
+// var_dump($_SESSION['currentProvSet']);
  ?>
 
 
@@ -107,7 +106,7 @@ if($_SESSION['current_num'] >= 0){
     <div class="backHome line">ホームに戻る</div>
     <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../script/questions_jquery.js">
+    <script src="./script/questions_jquery.js">
 
     </script>
   </body>

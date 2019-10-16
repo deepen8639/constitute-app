@@ -14,10 +14,10 @@ define('DB_PASSWORD',$password);
 define('PDO_DSN',$dsn);
 
 //urlの設定
-if (empty($_SERVER["HTTPS"])) {
-  $url =  "http://";
-} else {
+if (isset($_SERVER["HTTPS"])) {
   $url =  "https://";
+} else {
+  $url =  "http://";
 }
 
 define('SITE_URL', $url . $_SERVER['HTTP_HOST']);

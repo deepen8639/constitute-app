@@ -12,16 +12,23 @@ body {
   /* cursor: pointer; */
   text-align: left;
   margin-left: 35%;
+  padding-top: 50px;
+
   /* margin-right: 35%; */
 }
 
 .part0{
   cursor: pointer;
 }
+.part0:hover{
+  opacity: 0.6;
+}
 label{
   cursor: pointer;
 }
-
+label:hover{
+  opacity: 0.6;
+}
 .hide, .indivHide{
   display: none;
 }
@@ -40,6 +47,10 @@ label{
 
 }
 
+.title:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}
 
 pre{
   white-space: pre-wrap;
@@ -64,6 +75,12 @@ pre{
   font-size: 14px;
   margin-left: 7%;
 }
+.customButton:hover {
+  opacity: 0.6;
+}
+.customStartButton:hover {
+  opacity: 0.6;
+}
 .customStartButton{
   text-align: center;
   margin-right: auto;
@@ -81,7 +98,7 @@ pre{
 .individual{
   position: relative;
   top: 30px;
-
+  margin-bottom: 200px;
 }
 .individualButton {
   text-align: center;
@@ -96,6 +113,9 @@ pre{
   font-size: 14px;
   margin-left: 7%;
 }
+.individualButton:hover {
+  opacity: 0.6;
+}
 .indivStartButton{
   text-align: center;
   /* margin-right: auto; */
@@ -109,9 +129,42 @@ pre{
   font-size: 14px;
   margin-left: 30px;
 }
-
+.indivStartButton {
+  opacity: 0.6;
+}
 .selected{
   opacity: 0.65;
+}
+
+
+
+.menu{
+  background: #4b0082;
+  color: #f5f5f5;
+  position: absolute;
+  top: 1%;
+  right: 5%;
+}
+.menu .login:hover,
+.menu .register:hover,
+.menu .mypage:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media (min-width: 401px) and (max-width: 700px) {
+  .menu{
+    background: #4b0082;
+    color: #f5f5f5;
+    position: absolute;
+    top: 30px;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+  }
+
+
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
@@ -198,6 +251,18 @@ pre{
     font-size: 20px;
     margin-left: 25px;
   }
+  .menu{
+    background: #4b0082;
+    color: #f5f5f5;
+    position: absolute;
+    top: 35px;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+
+  }
+
 
 
 }

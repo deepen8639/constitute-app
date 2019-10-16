@@ -39,7 +39,7 @@ class Provision {
    try {
      $selected_id = explode('part', $selected_id);
      $selected_id = explode('_', $selected_id[1]);
-     $sql = sprintf("select provision, caption, title,blank_1,choices_1
+     $sql = sprintf("select id, provision, caption, title,blank_1,choices_1
      from Constitute where id>=%s and id<%s", $selected_id[0],$selected_id[1]);
      $stmt = $this->_db->prepare($sql);
      $stmt->execute();
@@ -62,7 +62,7 @@ class Provision {
    $_SESSION['currentProvSet'] = array();
    try {
      for($i=0; $i<count($ids); $i++){
-       $sql = sprintf("select provision, caption, title,blank_1,choices_1
+       $sql = sprintf("select id, provision, caption, title,blank_1,choices_1
        from Constitute where id>=%s and id<%s", $ids[$i][0],$ids[$i][1]);
        $stmt = $this->_db->prepare($sql);
        $stmt->execute();
@@ -94,7 +94,7 @@ class Provision {
      }
    }
    try {
-     $sql = sprintf("select provision, caption, title,blank_1,choices_1
+     $sql = sprintf("select id, provision, caption, title,blank_1,choices_1
      from Constitute where id in (%s)", $ques);
      $stmt = $this->_db->prepare($sql);
      $stmt->execute($selected_id);
@@ -164,6 +164,10 @@ class Provision {
    $_SESSION['wrong_ques'] = [];
    $_SESSION['random'] = false;
    $_SESSION['finish'] = false;
+   $_SESSION['collect_ques_id'] = [];
+   $_SESSION['wrong_ques_id'] = [];
+   $_SESSION['resultUpdated'] = false;
+
    // $this->_initSession();
  }
 
@@ -171,20 +175,18 @@ class Provision {
    shuffle($_SESSION['currentProvSet']);
  }
 
- public function setParts(){
-   if(!isset($_SESSION['CapAndTitle'])){
+ public function getParts(){
 
      try {
        $sql = sprintf("select id, caption, title from Constitute");
        $stmt = $this->_db->prepare($sql);
        $stmt->execute();
-       $_SESSION['CapAndTitle'] = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+       return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
      } catch (\PDOException $e) {
        echo $e->getMessage() . " - " . $e->getLine().PHP_EOL;
        exit;
      }
-   }
 
  }
 
@@ -204,10 +206,11 @@ class Provision {
  }
 
  public function getWrongQues(){
+   //間違えた条文本体を返す
    $wrongQues = [];
-   $quesNum = $_SESSION['wrong_ques'];
-   for($i=0; $i<count($quesNum); $i++){
-     $wrongQues[] = $_SESSION['currentProvSet'][$quesNum[$i]];
+   $ques = $_SESSION['wrong_ques'];
+   for($i=0; $i<count($ques); $i++){
+     $wrongQues[] = $_SESSION['currentProvSet'][$ques[$i]];
    }
    return $wrongQues;
  }

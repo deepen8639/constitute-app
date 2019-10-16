@@ -6,13 +6,15 @@ require_once(__DIR__ . '/Class/Provision.php');
 $Prov = new LawApp\Provision();
 //セッションをリセット
 $Prov->resetSession();
-//キャプションとOO条（タイトル）を取得、セッションに格納
-$Prov->setParts();
-//格納したキャプションとタイトルを$CandTにセット
-$CandT = $_SESSION['CapAndTitle'];
+
+//キャプションとOO条（タイトル）を取得、
+//キャプションとタイトルを$CandTにセット
+$CandT = $Prov->getParts();
 
 // var_dump(SITE_URL);
 
+
+// var_dump($_SESSION);
  ?>
 
 
@@ -39,6 +41,7 @@ $CandT = $_SESSION['CapAndTitle'];
       <span class="title">条文練習</span>
     </div>
 
+  <div class="content">
 
     <div class="container">
 
@@ -142,8 +145,8 @@ $CandT = $_SESSION['CapAndTitle'];
                 <?php echo h( '　'.$value['title'] . $value['caption']) . '</label><br>'; ?>
               <?php endforeach; ?>
             </div>
+          </div>
 
-    </div>
     <div class="custom">
       <span class="customButton">
         章で選択する
@@ -162,6 +165,16 @@ $CandT = $_SESSION['CapAndTitle'];
       </span>
     </div>
 
+  </div>
+  <div class="lapmenu">
+
+  <div class="menu">
+    <span class="login">ログイン</span>
+    /
+    <span class="register">新規登録</span>
+    <span class="mypage">　マイページ</span>
+  </div>
+</div>
 
 
   <script

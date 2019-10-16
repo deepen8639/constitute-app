@@ -30,6 +30,9 @@ body{
   font-size: 14px;
   margin-left: 30px;
 }
+.backHome:hover{
+  opacity: 0.6;
+}
 .hide{
   display: none;
 }

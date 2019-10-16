@@ -150,5 +150,14 @@ $(function(){
     });
   });
 
+  $('.login').on('click', function(){
+    window.location.href = './-loginPage.php';
+  });
+  $('.register').on('click', function(){
+    window.location.href = './-signUpPage.php';
+  });
+  $('.mypage').on('click', function(){
+    window.location.href = './-MyPage.php';
+  });
 
 });
