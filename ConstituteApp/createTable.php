@@ -15,7 +15,7 @@ try {
 $sql = "create table if not exists Users (
   id varchar(255) unique,
   password varchar(255),
-  created datetime default now(),
+  created datetime,
   modified datetime,";
   for ($i=1; $i < 104; $i++) {
     // code...
