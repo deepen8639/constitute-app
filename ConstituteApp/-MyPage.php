@@ -56,6 +56,7 @@ $CandT = $Prov->getParts();
  </script>
 
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>マイページ</title>
      <link rel="stylesheet" href="./css/MyPage.css">
 

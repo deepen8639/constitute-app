@@ -19,6 +19,7 @@
  </script>
 
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>新規登録</title>
      <link rel="stylesheet" href="./css/signUpPage.css">
    </head>
